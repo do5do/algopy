@@ -7,7 +7,6 @@ for num in number:
     else:
         set[num] += 1
 
-
 if set[6] % 2 == 0:
     set[6] = set[6] // 2
 else:
