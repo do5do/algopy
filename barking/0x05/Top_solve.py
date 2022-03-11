@@ -14,6 +14,6 @@ for i in range(len(top)):
             break
     if not stack:
         result.append(0)
-    stack.append((i, top[i]))
+    stack.append((i, top[i])) # index와 함께 저장
 
 print(" ".join(map(str, result)))
