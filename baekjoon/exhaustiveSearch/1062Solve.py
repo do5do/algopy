@@ -17,14 +17,14 @@ maxCnt = 0
 
 def backtraking(alph, length):
     global maxCnt
-    if length == k - 5: # 몇개 읽을 수 있는지 체크
+    if length == k - 5:
         cnt = 0
         for word in words:
             for w in word:
                 # 각 단어가 배우지 않은거면
                 if not learned[ord(w) - ord('a')]:
                     break
-            else: # 각 단어를 모두 배웠으면 count
+            else: # 위 for문의 else 구문. -> 각 단어를 모두 배웠으면 count
                 cnt += 1
         maxCnt = max(maxCnt, cnt) # max 값 갱신
         return # 없으면 끝나지 않음
@@ -41,4 +41,6 @@ print(maxCnt)
 '''
 gold4
 python 제출 시간 초과, pypy3으로 제출 시 성공 (680ms)
+1. 필수 배울 단어를 미리 체크한다.
+2. 모든 알파벳의 k-5의 개수만큼 조합으로 백트래킹 탐색
 '''
