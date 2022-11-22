@@ -5,7 +5,7 @@ input = sys.stdin.readline
 n = int(input().strip())
 s = [list(map(int, input().strip().split())) for _ in range(n)]
 num = [i for i in range(n)] # 조합을 구할 리스트
-minValue = 200
+minValue = sys.maxsize
 
 combList = list(combinations(num, n//2)) # 반으로 나눈 수로 조합을 구함 -> 한 팀 설정
 for comb in combList:
@@ -23,7 +23,7 @@ for comb in combList:
 
 print(minValue)
 
-
-
-
-
+'''
+silver 1
+이 풀이는 틀렸다.. 왜지??
+'''
