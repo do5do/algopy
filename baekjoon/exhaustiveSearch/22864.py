@@ -12,3 +12,7 @@ for time in range(1, 25):
             tired = 0
 
 print(work)
+
+'''
+bronze 2
+'''
