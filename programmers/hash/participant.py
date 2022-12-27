@@ -15,6 +15,7 @@ for key, value in partDict.items():
         print(key)
 
 '''
+완주하지 못한 선수 level 1
 문제 풀이
 - 참가자를 dictionary로 변환한다.
     - 기본 값을 0으로 설정하고 동명이인이 있으면 기본 값에 1을 더해준다.
