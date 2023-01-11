@@ -5,11 +5,11 @@ answer = []
 queue = deque(arr)
 while True:
     if len(queue) == 1:
-        answer.append(queue[0])
+        answer.append(queue[0]) # 마지막 남은 값 append
         break
-    if queue[0] != queue[1]:
-        answer.append(queue[0])
-    queue.popleft()
+    if queue[0] != queue[1]: # 첫번째 값과 다음 값으로 값 두개씩 비교
+        answer.append(queue[0]) # 서로 다른 값일 때 append (== 앞에 같은 값을 모두 제거하고 남은 하나의 값을 넣는 것)
+    queue.popleft() # 첫번째 값은 비교 후 뽑는다.
 
 print(answer)
 
