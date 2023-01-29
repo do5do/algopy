@@ -1,4 +1,4 @@
-# 두번째 solve
+# 다시 풀기 : 2회차
 from collections import deque
 
 
