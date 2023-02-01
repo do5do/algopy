@@ -4,12 +4,12 @@ from collections import deque
 def solution(bridge_length, weight, truck_weights):
     time = 0
     trucks = deque(truck_weights) # 대기 중인 트럭
-    bridge = deque([0] * bridge_length)
+    bridge = [0] * bridge_length
     bridgeWeight = 0
 
     while bridge:
         time += 1
-        bridgeWeight -= bridge.popleft() # 1초에 한칸씩 다리를 이동
+        bridgeWeight -= bridge.pop(0) # 1초에 한칸씩 다리를 이동
 
         if trucks:
             if bridgeWeight + trucks[0] <= weight: # 다리에 다음 트럭을 올릴 수 있으면
