@@ -1,6 +1,8 @@
 from collections import deque
 
 
+def bfs(visited, graph, a, b):
+    pass
 
 
 def solution(n, wires):
@@ -12,6 +14,9 @@ def solution(n, wires):
 
     for a, b in wires:
         visited = [False] * (n+1)
+        visited[a], visited[b] = True, True # 연결 관계 무시
+        bfs(visited, graph, a, b)
+        visited[a], visited[b] = False, False # 연결 관계 다시 복구
 
     return answer
 
